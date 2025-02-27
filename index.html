@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon.names=thumb_up,delete&opsz=48" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Handlee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />                 
+</head>
+
+<body>
+    <div id="app">
+        <div class="top">
+
+            <div>
+                <h1>{{title}}</h1>
+                <small>Olá, {{userName}}</span> </small>            
+            </div>
+    
+            <form @submit.prevent="search">
+                <input placeholder="Busca por nome..." v-model="searchName" @keyup.enter="search" />
+                <button class="btn-main" type="submit">Buscar</button>
+            </form>
+    
+            
+        </div>
+      
+        <div class="characters">
+            <div class="item" v-for="item of characters">
+
+                <img :src="item.avatar" :alt="item.nome" />
+                <p>{{item.nome}}</p>
+
+                <span @click="like(item.nome)" class="material-symbols-outlined like">
+                    thumb_up
+                </span>
+                
+                <span @click="remove(item.id)" class="material-symbols-outlined delete">
+                    delete
+                </span>
+
+                <!-- <div class="icons-container">
+                    <img @click="like(item.nome)" src="icos/likeicos.svg" alt="Like" class="icos-p" />
+                    <img @click="remove(item.id)" src="icos/deleteicos.svg" alt="Remover" class="icos-p" />
+                </div>
+                 -->
+
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+body {
+   background-image: url(../images/bg-space.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   background-color: #111;
+   color: #CCC;
+   font-family: 'Handlee', cursive;
+}
+
+#app {
+   text-align: center;
+   width: 820px;
+   margin: auto;
+}
+
+.top {
+   padding: 25px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   align-items: center;
+   text-align: left;
+}
+
+.top h1 {
+   font-size: 2em;
+   margin: 0;
+   color: #fff;
+   font-family: "Acme", serif;
+   font-weight: 400;
+   font-style: normal;
+}
+
+.top form {
+   margin: 0;
+}
+
+.top form {
+   text-align: right;
+}
+
+.characters {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+}
+
+.characters .item {
+   padding: 20px;
+}
+
+.characters .item img {
+   width: 100%;
+   border-radius: 20%;
+   border: 5px #111 solid;
+}
+
+.characters .item img:hover {
+   border: 5px #FD4 solid;
+}
+
+input {
+   padding: 0.75em 1.25em;
+   border-radius: 8px;
+   border: none;
+   font-size: 1rem;
+   font-family: 'Handlee', cursive;
+   
+}
+form {
+   align-items: center;
+   gap: 9px; /* Espaço entre o input e o botão */
+}
+
+input:focus {
+   border-color: #999; /* Muda a cor ao focar */
+   font-family: 'Handlee', cursive;
+}
+
+
+button {
+   padding: 0.75em 1.25em;
+   border-radius: 8px;
+   background-color: #FD4;
+   color: #111;
+   border: none;
+   font-size: 1rem;
+   font-family: 'Handlee', cursive;
+}
+
+.btn-main:hover {
+   background-color: #bbb; /* Um pouco mais escuro ao passar o mouse */
+}
+
+.icons-container {
+   display: flex; /* Ativa o Flexbox */
+   gap: 10px; /* Espaço entre os ícones */
+   align-items: center; /* Alinha os ícones verticalmente */
+   
+}
+.icos-p {
+   width: 20px;
+   height: 20px;
+   cursor: pointer;
+   filter: invert(100%); /* Transforma preto em branco */
+   transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Efeito ao passar o mouse */
+.icos-p:hover {
+   transform: scale(1.2); /* Aumenta levemente o ícone */
+   opacity: 0.8; /* Suaviza a opacidade */
+}
+
+.material-symbols-outlined:hover {
+   transform: scale(1.2); /* Aumenta levemente o ícone */
+   opacity: 0.8; /* Suaviza a opacidade */
+   cursor: pointer;
+
+}
+
+.like {
+   color: rgb(191, 230, 20);
+    margin-right: 10px;
+}
+
+.delete {
+   color: rgb(221, 93, 34);
+}
